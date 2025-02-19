@@ -1,0 +1,84 @@
+/* Fondo con efecto oscuro para mejor contraste */
+body {
+    background: url('/imagen/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white; /* Letra blanca para mejor visibilidad */
+}
+
+/* Contenedor principal */
+#courses {
+    padding: 40px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7); /* Oscurece el fondo para resaltar contenido */
+    border-radius: 10px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Título */
+#courses h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de cursos */
+.course-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilo de cada curso */
+.course {
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Imagen del curso */
+.course img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Títulos de los cursos */
+.course h3 {
+    font-size: 20px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Descripción */
+.course p {
+    font-size: 14px;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+/* Botón mejorado */
+.course button {
+    padding: 10px 15px;
+    background: #28a745;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.course button:hover {
+    background: #218838;
+}
+

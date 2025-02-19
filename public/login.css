@@ -1,0 +1,94 @@
+/* Fondo general */
+body {
+    background: url('/imagen/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor del formulario */
+#login-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+    width: 350px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Título */
+#login-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Campos de entrada */
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Botón de inicio de sesión */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #28a745;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* Enlace de registro */
+#login-container a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#login-container a:hover {
+    text-decoration: underline;
+}
+
+.form-container h2 {
+    text-align: center; /* Centrar el texto */
+    font-size: 28px; /* Tamaño más grande */
+    font-weight: bold; /* Hacerlo más grueso */
+    color: #ffffff; /* Cambiar a blanco para que resalte más */
+    text-shadow: 3px 3px 5px rgb(0, 0, 0); /* Agregar sombra para profundidad */
+}
+
+
+button[type="submit"] {
+    width: 85%; /* Ajustar el ancho del botón */
+    text-align: center; /* Asegurar que el texto dentro esté alineado */
+    margin-top: 10px; /* Espaciado superior */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar los elementos dentro del formulario */
+    width: 100%;
+}
+

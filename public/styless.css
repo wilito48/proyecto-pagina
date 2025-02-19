@@ -1,0 +1,210 @@
+/* General */
+body {
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    font-family: 'Arial', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: url('/imagen/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #ff6600;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #cc5500;
+}
+
+/* Contenedor del curso */
+.course-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.course-card {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Imagen del curso */
+.course-image {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Información del curso */
+.course-info {
+    text-align: center;
+}
+
+.course-info h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.course-info p {
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background: #4CAF50;
+}
+
+.btn-primary:hover {
+    background: #3e8e41;
+}
+
+.temario-container {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    text-align: left; /* Alineación a la izquierda */
+}
+
+.temario-container h3 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.temario-container ul {
+    list-style-type: disc; /* Poner viñetas normales */
+    padding-left: 20px; /* Separar la lista de la izquierda */
+}
+
+.temario-container ul li {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 12px;
+    margin: 8px 0; /* Espaciado entre elementos */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.course img {
+    width: 100%; /* Hace que la imagen ocupe el ancho completo del contenedor */
+    max-width: 300px; /* Limita el tamaño máximo */
+    height: 180px; /* Establece una altura fija */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;
+    display: inline-block;
+    padding: 10px 20px;
+
+    /* Color sólido blanco */
+    color: #ffffff;
+
+    /* Efecto de brillo más intenso */
+    text-shadow: 
+        0px 0px 10px #ffffff, 
+        0px 0px 20px #dddddd, 
+        0px 0px 30px #bbbbbb;
+
+    /* Animación de resplandor */
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Animación de brillo */
+@keyframes glow {
+    0% {
+        text-shadow: 
+            0px 0px 10px #ffffff, 
+            0px 0px 20px #dddddd, 
+            0px 0px 30px #bbbbbb;
+    }
+    100% {
+        text-shadow: 
+            0px 0px 15px #ffffff, 
+            0px 0px 25px #eeeeee, 
+            0px 0px 35px #ffffff;
+    }
+}
+
+h2::after {
+    content: attr(data-text); /* Usa el mismo texto */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    opacity: 0.5;
+    color: rgba(255, 255, 255, 0.2);
+    transform: scaleY(-1);
+    filter: blur(8px);
+}
+
+.course-list-title {
+    font-size: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;
+    display: inline-block;
+    padding: 10px 20px;
+    
+    /* Degradado llamativo */
+    background: linear-gradient(45deg, #ff0000, #ff7300, #ffd700);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; /* Para navegadores que soportan la propiedad estándar */
+    -webkit-text-fill-color: transparent; /* Para navegadores WebKit */
+
+    /* Borde oscuro sutil para contraste */
+    text-shadow: 
+        2px 2px 5px rgba(0, 0, 0, 0.8), 
+        4px 4px 10px rgba(0, 0, 0, 0.6);
+
+    /* Brillo dinámico */
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Efecto de brillo */
+@keyframes glow {
+    0% { text-shadow: 2px 2px 5px rgba(255, 165, 0, 0.8); }
+    100% { text-shadow: 4px 4px 15px rgba(255, 69, 0, 1); }
+}
+
