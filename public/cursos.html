@@ -6,7 +6,7 @@
     <title>Plataforma de Cursos - False Society</title>
     <link rel="stylesheet" href="styless.css">
     <link rel="stylesheet" href="menu.css">
-    <script defer src="cursos.js"></script>
+
 </head>
 <body>
     <header>
@@ -16,6 +16,7 @@
             <button id="userMenuButton">👤 <span id="usernameDisplay">Usuario</span> ▼</button>
             <div class="user-dropdown">
                 <p>Usuario: <span id="userInfo"></span></p>
+                <p>Correo: <span id="userEmail"></span></p>
                 <button id="logoutButton">Cerrar sesión</button>
             </div>
         </div>
@@ -29,6 +30,7 @@
         <div id="courseList" class="course-container">
             <!-- Aquí se cargarán los cursos dinámicamente -->
         </div>
-    </section>    
+    </section>   
+    <script defer src="cursos.js"></script> 
 </body>
 </html>

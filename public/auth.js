@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
           console.log("✅ Guardando token en localStorage...");
           localStorage.setItem("token", data.token);
           localStorage.setItem("username", data.username);
-          
+          localStorage.setItem("email", data.email); // Guardar el correo  
           console.log("🔄 Redirigiendo a la plataforma de cursos...");
           window.location.href = "http://127.0.0.1:5500/public/cursos.html"; // 🔹 Redirige a cursos.html
       }

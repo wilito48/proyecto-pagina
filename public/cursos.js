@@ -44,6 +44,7 @@ window.verCurso = function (cursoId) {
 document.addEventListener("DOMContentLoaded", () => {
     const token = localStorage.getItem("token");
     const username = localStorage.getItem("username");
+    const email = localStorage.getItem("email");
 
     if (!token) {
         // Si no hay sesión, redirigir al login
@@ -52,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Mostrar el nombre del usuario en el botón
         document.getElementById("usernameDisplay").textContent = username;
         document.getElementById("userInfo").textContent = username;
+        document.getElementById("userEmail").textContent = email;
     }
 
     // Manejador del menú desplegable
