@@ -41,25 +41,41 @@ window.verCurso = function (cursoId) {
     window.location.href = `curso.html?id=${cursoId}`;
 };
 
-document.addEventListener("DOMContentLoaded", function () {
-    const logoutButton = document.getElementById("logoutButton");
+document.addEventListener("DOMContentLoaded", () => {
+    const token = localStorage.getItem("token");
+    const username = localStorage.getItem("username");
 
-    if (logoutButton) {
-        logoutButton.addEventListener("click", function () {
-            console.log("Cerrando sesión...");
-
-            // Borra cualquier dato de sesión en localStorage y sessionStorage
-            localStorage.clear();
-            sessionStorage.clear();
-
-            // (Opcional) Si usas cookies para la sesión, bórralas
-            document.cookie = "usuario=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-
-            // Redirige a la página de login
-            window.location.href = "login.html"; // Ajusta según tu estructura
-        });
+    if (!token) {
+        // Si no hay sesión, redirigir al login
+        window.location.href = "http://127.0.0.1:5500/public/login.html";
     } else {
-        console.error("El botón de cerrar sesión no fue encontrado en el DOM.");
+        // Mostrar el nombre del usuario en el botón
+        document.getElementById("usernameDisplay").textContent = username;
+        document.getElementById("userInfo").textContent = username;
     }
+
+    // Manejador del menú desplegable
+    const userMenuButton = document.getElementById("userMenuButton");
+    const userDropdown = document.querySelector(".user-dropdown");
+
+    userMenuButton.addEventListener("click", () => {
+        userDropdown.classList.toggle("show"); // Muestra u oculta el menú
+    });
+
+    // Cerrar sesión
+    document.getElementById("logoutButton").addEventListener("click", () => {
+        localStorage.removeItem("token");
+        localStorage.removeItem("username");
+        window.location.href = "http://127.0.0.1:5500/public/login.html"; // Redirigir al login
+    });
+
+    // Ocultar menú si se hace clic fuera
+    document.addEventListener("click", (event) => {
+        if (!userMenuButton.contains(event.target) && !userDropdown.contains(event.target)) {
+            userDropdown.classList.remove("show");
+        }
+    });
 });
+
+
 

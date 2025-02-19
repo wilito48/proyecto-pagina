@@ -1,0 +1,53 @@
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.user-menu button {
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.user-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    min-width: 150px;
+    padding: 10px;
+}
+
+.user-dropdown p {
+    margin: 0;
+    padding: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.user-dropdown button {
+    width: 100%;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.user-dropdown button:hover {
+    background-color: darkred;
+}
+
+/* Mostrar el menú cuando se activa */
+.show {
+    display: block;
+}

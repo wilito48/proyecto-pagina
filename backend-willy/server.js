@@ -6,6 +6,7 @@ const cors = require("cors");
 const path = require("path");
 
 const app = express(); // Inicializa Express
+app.use(express.json());
 
 // ✅ Verifica que las variables de entorno existen
 if (!process.env.MONGO_URI || !process.env.JWT_SECRET) {

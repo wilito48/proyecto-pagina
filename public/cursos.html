@@ -5,13 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plataforma de Cursos - False Society</title>
     <link rel="stylesheet" href="styless.css">
+    <link rel="stylesheet" href="menu.css">
     <script defer src="cursos.js"></script>
 </head>
 <body>
     <header>
         <h1>False-Society</h1>
-        <button id="logoutButton">Cerrar Sesión</button>
+    
+        <div class="user-menu">
+            <button id="userMenuButton">👤 <span id="usernameDisplay">Usuario</span> ▼</button>
+            <div class="user-dropdown">
+                <p>Usuario: <span id="userInfo"></span></p>
+                <button id="logoutButton">Cerrar sesión</button>
+            </div>
+        </div>
     </header>
+    
+    
 
     <section id="courses">
         <h2 class="course-list-title">Lista de Cursos<br/>Disponibles</h2>
