@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Ética Hacker - Videos</title>
+    <link rel="stylesheet" href="curso-videos.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Contenedor del Video -->
+        <div class="video-container">
+            <h1>Curso de Análisis Forense</h1>
+            <video id="video-player" controls>
+                <source src="videos/intro.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+            <p id="video-description">Introducción al análisis forense.</p>
+        </div>
+
+        <!-- Lista de Lecciones -->
+        <div class="lesson-list">
+            <h2>Lecciones</h2>
+            <ul>
+                <li><button class="lesson-button" data-video="./forense-videos/forense1.mp4" data-description="Introducción al análisis Forense.">Introducción</button></li>
+                <li><button class="lesson-button" data-video="./forense-videos/forense2.mp4" data-description="Principios básicos y herramientas esenciales.">Analisis Forense</button></li>
+                <li><button class="lesson-button" data-video="./forense-videos/forense3.mp4" data-description="Tipos de ataques Forense.">Tipos de Ataques</button></li>
+            </ul>
+        </div>
+    </div>
+
+    <button id="volverCurso" class="back-button">Volver al curso</button>
+
+    <script src="curso-videos.js"></script>
+</body>
+</html>

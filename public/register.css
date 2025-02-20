@@ -1,18 +1,17 @@
-/* Fondo general */
-body {
+/* 🔹 Fondo general */
+html, body {
     background: url('/imagen/fondo.jpg') no-repeat center center fixed;
     background-size: cover;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
     height: 100vh;
 }
 
-/* Contenedor del formulario */
-#login-container {
+.login-container { /* Usamos la misma clase que en login.html */
     background: rgba(0, 0, 0, 0.7);
     padding: 30px;
     border-radius: 10px;
@@ -20,31 +19,49 @@ body {
     width: 350px;
     text-align: center;
     backdrop-filter: blur(10px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    /* Esto evitará que tenga margen extra */
+    flex-grow: 1; 
 }
 
-/* Título */
-#login-container h2 {
+/* 🔹 Título */
+.login-container h2 {
     font-size: 24px;
     font-weight: bold;
     color: white;
     margin-bottom: 20px;
 }
 
-/* Campos de entrada */
-input[type="email"], input[type="password"], input[type="text"]{
-    width: 100%;
-    padding: 10px;
+/* 🔹 Campos de entrada */
+input[type="email"], input[type="password"], input[type="text"] {
+    width: 90%;
+    padding: 12px;
     margin: 10px 0;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 5px;
     font-size: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    text-align: left;
+    outline: none;
 }
 
-/* Botón de inicio de sesión */
-button {
-    width: 100%;
+/* 🔹 Placeholder */
+input::placeholder {
+    color: #666;
+}
+
+/* 🔹 Botón de registro (mismo estilo que login) */
+.register-button {
+    width: 97%;
     padding: 12px;
-    background: #28a745;
+    background: linear-gradient(45deg, #28a745, #00c851);
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     border: none;
     color: white;
     cursor: pointer;
@@ -52,43 +69,26 @@ button {
     font-size: 16px;
     font-weight: bold;
     transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 15px; /* Espacio extra para que no esté pegado */
 }
 
-button:hover {
-    background: #218838;
-    transform: scale(1.05);
+.register-button:hover {
+    background: linear-gradient(45deg, #218838, #007e33); /* Verde más intenso */
+    transform: scale(1.07); /* Efecto de crecimiento */
+    box-shadow: 0px 0px 12px rgba(40, 167, 69, 0.7); /* Efecto de brillo */
 }
 
-/* Enlace de registro */
-#login-container a {
-    color: #ffcc00;
+/* 🔹 Enlace para iniciar sesión */
+.login-link {
+    color: #b19cd9; /* Morado elegante */
     text-decoration: none;
-    font-size: 14px;
+    font-weight: bold;
 }
 
-#login-container a:hover {
+.login-link:hover {
     text-decoration: underline;
 }
 
-.form-container h2 {
-    text-align: center; /* Centrar el texto */
-    font-size: 28px; /* Tamaño más grande */
-    font-weight: bold; /* Hacerlo más grueso */
-    color: #ffffff; /* Cambiar a blanco para que resalte más */
-    text-shadow: 3px 3px 5px rgb(0, 0, 0); /* Agregar sombra para profundidad */
+p {
+    margin: 25px 0 0 0; /* Ajusta el margen */
 }
-
-
-button[type="submit"] {
-    width: 85%; /* Ajustar el ancho del botón */
-    text-align: center; /* Asegurar que el texto dentro esté alineado */
-    margin-top: 10px; /* Espaciado superior */
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrar los elementos dentro del formulario */
-    width: 100%;
-}
-

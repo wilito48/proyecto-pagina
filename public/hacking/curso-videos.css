@@ -1,0 +1,89 @@
+body {
+    background: #1e1e1e;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 80%;
+    margin-top: 50px;
+}
+
+.video-container {
+    flex: 2;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.lesson-list {
+    flex: 1;
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+}
+
+.lesson-button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background: #28a745;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.lesson-button:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+.back-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: linear-gradient(135deg, #00d2ff, #3a47d5);
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(0, 210, 255, 0.6);
+    letter-spacing: 0.8px;
+    text-transform: none; /* Asegurar que el texto se muestre como está en el HTML */
+}
+
+.back-button:hover {
+    background: linear-gradient(135deg, #3a47d5, #00d2ff);
+    transform: scale(1.08);
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.9);
+}
+

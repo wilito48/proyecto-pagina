@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Ética Hacker - Videos</title>
+    <link rel="stylesheet" href="curso-videos.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Contenedor del Video -->
+        <div class="video-container">
+            <h1>Curso de Ética Hacker y Pentesting</h1>
+            <video id="video-player" controls>
+                <source src="videos/intro.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+            <p id="video-description">Introducción al hacking ético y su importancia.</p>
+        </div>
+
+        <!-- Lista de Lecciones -->
+        <div class="lesson-list">
+            <h2>Lecciones</h2>
+            <ul>
+                <li><button class="lesson-button" data-video="./hacking-etico/1.mp4" data-description="Introducción al hacking ético y su importancia.">Introducción</button></li>
+                <li><button class="lesson-button" data-video="./hacking-etico/2.mp4" data-description="Principios básicos del Pentesting y herramientas esenciales.">Pentesting Básico</button></li>
+                <li><button class="lesson-button" data-video="./hacking-etico/3.mp4" data-description="Tipos de ataques más comunes y cómo prevenirlos.">Tipos de Ataques</button></li>
+            </ul>
+        </div>
+    </div>
+
+    <button id="volverCurso" class="back-button">Volver al curso</button>
+
+    <script src="curso-videos.js"></script>
+</body>
+</html>

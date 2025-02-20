@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+    console.log("✅ curso.js se ha cargado correctamente.");
+
     const params = new URLSearchParams(window.location.search);
     const courseId = params.get("id");
 
@@ -19,18 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 "Principios de Pentesting",
                 "Ataques y Defensas Comunes",
                 "Explotación de Vulnerabilidades",
-                "Herramientas de Pentesting",
-                "Herramientas de Pentesting",
-                "Herramientas de Pentesting",
-                "Herramientas de Pentesting",
-                "Herramientas de Pentesting",
-                "Herramientas de Pentesting",
-                "Herramientas de Pentesting",
-                "Herramientas de Pentesting",
-                "Herramientas de Pentesting",
-                "Herramientas de Pentesting",
-
-            ]
+                "Herramientas de Pentesting"
+            ],
+            videoUrl: "/public/hacking/curso-videos.html" // Ruta específica
         },
         "2": { 
             titulo: "Análisis Forense Digital", 
@@ -41,24 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 "Recolección de Evidencia",
                 "Análisis de Discos Duros",
                 "Investigación de Malware",
-                "Elaboración de Informes Forenses",
-                "Elaboración de Informes Forenses",
-                "Elaboración de Informes Forenses",
-                "Elaboración de Informes Forenses",
-                "Elaboración de Informes Forenses",
-                "Elaboración de Informes Forenses",
-                "Elaboración de Informes Forenses",
-                "Elaboración de Informes Forenses",
-                "Elaboración de Informes Forenses",
-                "Elaboración de Informes Forenses",
-                "Elaboración de Informes Forenses",
-                "Elaboración de Informes Forenses",
-                "Elaboración de Informes Forenses",
-                "Elaboración de Informes Forenses",
-                "Elaboración de Informes Forenses",
-                "Elaboración de Informes Forenses",
-                "Elaboración de Informes Forenses"               
-            ]
+                "Elaboración de Informes Forenses"
+            ],
+            videoUrl: "/public/forense/curso-videos.html"
         },
         "3": { 
             titulo: "Seguridad en Redes", 
@@ -69,21 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 "Protocolos de Seguridad",
                 "Firewall y VPNs",
                 "Análisis de Tráfico de Red",
-                "Defensa ante Ataques en Redes",
-                "Defensa ante Ataques en Redes",
-                "Defensa ante Ataques en Redes",
-                "Defensa ante Ataques en Redes",
-                "Defensa ante Ataques en Redes",
-                "Defensa ante Ataques en Redes",
-                "Defensa ante Ataques en Redes",
-                "Defensa ante Ataques en Redes",
-                "Defensa ante Ataques en Redes",
-                "Defensa ante Ataques en Redes",
-                "Defensa ante Ataques en Redes",
-                "Defensa ante Ataques en Redes",
-                "Defensa ante Ataques en Redes",
                 "Defensa ante Ataques en Redes"
-            ]
+            ],
+            videoUrl: ""
         }
     };
 
@@ -111,7 +77,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Botón para volver a cursos
-    document.getElementById("backButton").addEventListener("click", () => {
-        window.location.href = "cursos.html";
-    });
+    const backButton = document.getElementById("backButton");
+    if (backButton) {
+        backButton.addEventListener("click", () => {
+            window.location.href = "cursos.html";
+        });
+    }
+
+    // ✅ Ahora sí, actualizamos el enlace del botón "Empezar Curso"
+    const startCourseButton = document.getElementById("startCourseButton");
+    if (startCourseButton) {
+        startCourseButton.href = curso.videoUrl;
+        console.log("✅ URL asignada al botón:", startCourseButton.href);
+    }
 });

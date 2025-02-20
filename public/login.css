@@ -92,7 +92,7 @@ button {
 .create-account {
     background: linear-gradient(45deg, #28a745, #00c851); /* Degradado verde vibrante */
     color: white;
-    margin-top: -30px;
+    margin-top: -37px;
     border-radius: 5px;
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     font-size: 17px;
