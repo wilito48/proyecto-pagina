@@ -227,6 +227,7 @@ h2::after {
 }
 
 .logo {
-    height: 50px; /* Ajusta según necesites */
-    display: block;
+    height: 50px; /* Ajusta el tamaño del logo */
+    width: auto;
+    cursor: pointer; /* Hace que se vea clickeable */
 }
