@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - False society</title>
+    <link rel="icon" href="/public/logo/log.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="css/output.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script type="module" src="js/auth.js"></script>
+</head>
+
+<body class="bg-gray-900 text-white min-h-screen">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-lg border-b border-gray-800 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-3">
+                    <img src="/public/logo/log.png" alt="False society" class="h-8 w-8">
+                    <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                        False society
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div id="nav-links" class="hidden md:flex items-center space-x-8"></div>
+
+                <!-- User Menu -->
+                <div id="user-menu" class="hidden md:flex items-center space-x-4"></div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-black/95 backdrop-blur-lg border-t border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300">Inicio</a>
+                <a href="cursos.html" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300">Cursos</a>
+                <a href="perfil.html" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300">Perfil</a>
+                <a href="contacto.html" class="block px-3 py-2 text-blue-400 font-semibold">Contacto</a>
+                <div class="border-t border-gray-700 pt-2 mt-2">
+                    <a href="perfil.html" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300">Mi Perfil</a>
+                    <a href="dashboard.html" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300">Dashboard</a>
+                    <a href="login.html" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300">Cerrar Sesión</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-gray-900 via-black to-gray-900 py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                        Contáctanos
+                    </h1>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        ¿Tienes preguntas sobre nuestros cursos o necesitas ayuda? Nuestro equipo está aquí para ayudarte
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Content -->
+        <section class="py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Information -->
+                    <div class="space-y-8">
+                        <div>
+                            <h2 class="text-2xl font-bold text-white mb-6">Información de Contacto</h2>
+                            <p class="text-gray-300 mb-8">
+                                Estamos aquí para ayudarte en tu viaje de aprendizaje en ciberseguridad. No dudes en contactarnos por cualquier consulta.
+                            </p>
+                        </div>
+
+                        <!-- Contact Methods -->
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700/50">
+                                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-envelope text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-semibold">Email</h3>
+                                    <p class="text-gray-400">info@falsesociety.com</p>
+                                    <p class="text-gray-400 text-sm">Soporte: support@falsesociety.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700/50">
+                                <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-phone text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-semibold">Teléfono</h3>
+                                    <p class="text-gray-400">+1 (555) 123-4567</p>
+                                    <p class="text-gray-400 text-sm">Lun - Vie: 9:00 AM - 6:00 PM</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700/50">
+                                <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-semibold">Ubicación</h3>
+                                    <p class="text-gray-400">Ciudad de México, México</p>
+                                    <p class="text-gray-400 text-sm">Av. Reforma 123, Centro</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700/50">
+                                <div class="w-12 h-12 bg-cyan-600 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-clock text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-semibold">Horarios</h3>
+                                    <p class="text-gray-400">Soporte 24/7 disponible</p>
+                                    <p class="text-gray-400 text-sm">Respuesta en menos de 24 horas</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-4">Síguenos en Redes Sociales</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors duration-300">
+                                    <i class="fab fa-twitter text-xl"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-blue-700 rounded-lg flex items-center justify-center text-white hover:bg-blue-800 transition-colors duration-300">
+                                    <i class="fab fa-linkedin text-xl"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center text-white hover:bg-red-700 transition-colors duration-300">
+                                    <i class="fab fa-youtube text-xl"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center text-white hover:bg-purple-700 transition-colors duration-300">
+                                    <i class="fab fa-discord text-xl"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center text-white hover:bg-gray-600 transition-colors duration-300">
+                                    <i class="fab fa-github text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-gray-800/50 backdrop-blur-lg rounded-2xl p-8 border border-gray-700/50">
+                        <h2 class="text-2xl font-bold text-white mb-6">Envíanos un Mensaje</h2>
+                        
+                        <form id="contactForm" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="firstName" class="block text-gray-300 mb-2">Nombre</label>
+                                    <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400">
+                                </div>
+                                <div>
+                                    <label for="lastName" class="block text-gray-300 mb-2">Apellido</label>
+                                    <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-gray-300 mb-2">Email</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400">
+                            </div>
+
+                            <div>
+                                <label for="subject" class="block text-gray-300 mb-2">Asunto</label>
+                                <select id="subject" name="subject" required class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option value="">Selecciona un asunto</option>
+                                    <option value="general">Consulta General</option>
+                                    <option value="courses">Información sobre Cursos</option>
+                                    <option value="technical">Soporte Técnico</option>
+                                    <option value="billing">Facturación</option>
+                                    <option value="partnership">Alianzas Comerciales</option>
+                                    <option value="other">Otro</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-gray-300 mb-2">Mensaje</label>
+                                <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400 resize-none"></textarea>
+                            </div>
+
+                            <div class="flex items-center space-x-3">
+                                <input type="checkbox" id="newsletter" name="newsletter" class="w-4 h-4 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-500 focus:ring-2">
+                                <label for="newsletter" class="text-gray-300 text-sm">Suscribirme al newsletter para recibir actualizaciones</label>
+                            </div>
+
+                            <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25">
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-16 bg-gray-800/30">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                        Preguntas Frecuentes
+                    </h2>
+                    <p class="text-gray-300 text-lg">
+                        Encuentra respuestas a las preguntas más comunes sobre False society
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="bg-gray-800/50 backdrop-blur-lg rounded-xl p-6 border border-gray-700/50">
+                        <h3 class="text-xl font-bold text-white mb-3">¿Cómo puedo comenzar con los cursos?</h3>
+                        <p class="text-gray-300">Simplemente regístrate en nuestra plataforma, elige el curso que te interese y comienza a aprender. Todos nuestros cursos están diseñados para principiantes.</p>
+                    </div>
+
+                    <div class="bg-gray-800/50 backdrop-blur-lg rounded-xl p-6 border border-gray-700/50">
+                        <h3 class="text-xl font-bold text-white mb-3">¿Los cursos son gratuitos?</h3>
+                        <p class="text-gray-300">Ofrecemos tanto cursos gratuitos como premium. Los cursos gratuitos te dan acceso a contenido básico, mientras que los premium incluyen contenido avanzado y certificados.</p>
+                    </div>
+
+                    <div class="bg-gray-800/50 backdrop-blur-lg rounded-xl p-6 border border-gray-700/50">
+                        <h3 class="text-xl font-bold text-white mb-3">¿Qué certificaciones ofrecen?</h3>
+                        <p class="text-gray-300">Ofrecemos certificaciones reconocidas en hacking ético, análisis forense digital, seguridad de redes y más. Todas nuestras certificaciones son válidas internacionalmente.</p>
+                    </div>
+
+                    <div class="bg-gray-800/50 backdrop-blur-lg rounded-xl p-6 border border-gray-700/50">
+                        <h3 class="text-xl font-bold text-white mb-3">¿Puedo acceder a los cursos desde cualquier dispositivo?</h3>
+                        <p class="text-gray-300">Sí, nuestra plataforma es completamente responsiva y puedes acceder desde tu computadora, tablet o smartphone en cualquier momento.</p>
+                    </div>
+
+                    <div class="bg-gray-800/50 backdrop-blur-lg rounded-xl p-6 border border-gray-700/50">
+                        <h3 class="text-xl font-bold text-white mb-3">¿Ofrecen soporte técnico?</h3>
+                        <p class="text-gray-300">Sí, ofrecemos soporte técnico 24/7 a través de email, chat en vivo y teléfono. Nuestro equipo está siempre disponible para ayudarte.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                        Nuestra Ubicación
+                    </h2>
+                    <p class="text-gray-300 text-lg">
+                        Visítanos en nuestras oficinas principales
+                    </p>
+                </div>
+
+                <div class="bg-gray-800/50 backdrop-blur-lg rounded-2xl p-8 border border-gray-700/50">
+                    <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                        <!-- Placeholder for map - you can replace with actual map embed -->
+                        <div class="w-full h-96 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-map-marked-alt text-6xl text-blue-400 mb-4"></i>
+                                <p class="text-white text-xl font-semibold">Mapa Interactivo</p>
+                                <p class="text-gray-400">Av. Reforma 123, Centro, Ciudad de México</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/90 border-t border-gray-800 py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="/public/logo/log.png" alt="False society" class="h-8 w-8">
+                        <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                            False society
+                        </span>
+                    </div>
+                    <p class="text-gray-400">
+                        Plataforma líder en educación de ciberseguridad
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Cursos</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="cursos.html" class="hover:text-white transition-colors duration-300">Hacking Ético</a></li>
+                        <li><a href="cursos.html" class="hover:text-white transition-colors duration-300">Informática Forense</a></li>
+                        <li><a href="cursos.html" class="hover:text-white transition-colors duration-300">Seguridad de Redes</a></li>
+                        <li><a href="cursos.html" class="hover:text-white transition-colors duration-300">Todos los Cursos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Compañía</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html#sobre-nosotros" class="hover:text-white transition-colors duration-300">Sobre Nosotros</a></li>
+                        <li><a href="contacto.html" class="hover:text-white transition-colors duration-300">Contacto</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Carreras</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Síguenos</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-300">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-red-600 transition-all duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-purple-600 transition-all duration-300">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 False society. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black/95');
+            } else {
+                navbar.classList.remove('bg-black/95');
+            }
+        });
+
+        // Load user data and protect page
+        async function loadUserData() {
+            const userData = await AuthManager.checkAuth();
+            if (!userData) return; // Ya redirigió a login
+            
+            document.getElementById('userName').textContent = userData.username;
+        }
+
+        document.addEventListener('DOMContentLoaded', async function() {
+            await loadUserData();
+            // Contact form handling
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData);
+                
+                // Simulate form submission
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Enviando...';
+                submitBtn.disabled = true;
+                
+                // Simulate API call
+                setTimeout(() => {
+                    alert('¡Mensaje enviado correctamente! Nos pondremos en contacto contigo pronto.');
+                    this.reset();
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }, 2000);
+            });
+
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements for animation
+            document.querySelectorAll('.bg-gray-800\\/50').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+    <style>
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fade-in 0.6s ease-out;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1f2937;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #3b82f6, #06b6d4);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, #2563eb, #0891b2);
+        }
+
+        /* Smooth transitions */
+        .bg-gray-800\/50 {
+            transition: all 0.3s ease;
+        }
+
+        /* Form focus effects */
+        input:focus, textarea:focus, select:focus {
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+    </style>
+</body>
+</html>

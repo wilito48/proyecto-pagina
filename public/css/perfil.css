@@ -1,0 +1,86 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor del perfil */
+.profile-container {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+/* Imagen de perfil */
+.profile-pic-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-pic-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #ff6600;
+    object-fit: cover;
+}
+
+.profile-pic-container input {
+    display: none;
+}
+
+.profile-pic-container label {
+    display: block;
+    background-color: #ff6600;
+    color: white;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: left;
+}
+
+input {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #222;
+    color: white;
+}
+
+button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #ff4500;
+}
+

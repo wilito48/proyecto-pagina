@@ -1,27 +1,16 @@
-const express = require('express');
+// routes/usuarios.js
+const express = require("express");
 const router = express.Router();
-const User = require('../models/User');
-const jwt = require('jsonwebtoken');
+const bcrypt = require("bcryptjs");
+const User = require("../models/User");
+const upload = require("../middlewares/upload");
+const auth = require("../middlewares/auth");  // Asegúrate de que auth esté correctamente importado
+const userController = require("../controllers/userController");
 
-// Middleware para verificar usuario autenticado
-const auth = async (req, res, next) => {
-    try {
-        const token = req.header('Authorization').replace('Bearer ', '');
-        const decoded = jwt.verify(token, 'secreto_super_seguro');
-        const user = await User.findById(decoded.id).populate('courses');
+// 🔒 GET: Obtener perfil del usuario logueado
+router.get("/perfil", auth.isAuthenticated, userController.getProfile);
 
-        if (!user) return res.status(401).json({ error: 'No autorizado' });
-
-        req.user = user;
-        next();
-    } catch (error) {
-        res.status(401).json({ error: 'No autorizado' });
-    }
-};
-
-// 📌 Obtener cursos habilitados para el usuario
-router.get('/mis-cursos', auth, async (req, res) => {
-    res.json({ courses: req.user.courses });
-});
+// 🔄 PUT: Actualizar perfil del usuario
+router.put("/perfil", auth.isAuthenticated, upload.single("imagen"), userController.updateProfile);
 
 module.exports = router;

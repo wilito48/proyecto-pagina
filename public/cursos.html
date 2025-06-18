@@ -3,36 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plataforma de Cursos - False Society</title>
-    <link rel="stylesheet" href="styless.css">
-    <link rel="stylesheet" href="menu.css">
-
+    <title>Cursos - False society</title>
+    <link rel="icon" href="/public/logo/log.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="css/output.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script type="module" src="js/auth.js"></script>
 </head>
-<body>
-    <header>
-        <a href="./cursos.html">
-            <img src="./logo/logo2.png" alt="False-Society Logo" class="logo">
-        </a>
-    
-        <div class="user-menu">
-            <button id="userMenuButton">👤 <span id="usernameDisplay">Usuario</span> ▼</button>
-            <div class="user-dropdown">
-                <p>Usuario: <span id="userInfo"></span></p>
-                <p>Correo: <span id="userEmail"></span></p>
-                <button id="logoutButton">Cerrar sesión</button>
+
+<body class="bg-gray-900 text-white min-h-screen">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-lg border-b border-gray-800 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-3">
+                    <img src="/public/logo/log.png" alt="False society" class="h-8 w-8">
+                    <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                        False society
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div id="nav-links" class="hidden md:flex items-center space-x-8"></div>
+
+                <!-- User Menu -->
+                <div id="user-menu" class="hidden md:flex items-center space-x-4"></div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
             </div>
         </div>
-    </header>
-    
-    
 
-    <section id="courses">
-        <h2 class="course-list-title">Lista de Cursos<br/>Disponibles</h2>
-        
-        <div id="courseList" class="course-container">
-            <!-- Aquí se cargarán los cursos dinámicamente -->
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-black/95 backdrop-blur-lg border-t border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300">Inicio</a>
+                <a href="#cursos" class="block px-3 py-2 text-blue-400 font-semibold">Cursos</a>
+                <a href="index.html#sobre-nosotros" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300">Sobre Nosotros</a>
+                <a href="index.html#contacto" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300">Contacto</a>
+                <div class="border-t border-gray-700 pt-2 mt-2">
+                    <a href="perfil.html" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300">Mi Perfil</a>
+                    <a href="dashboard.html" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300">Dashboard</a>
+                    <a href="login.html" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300">Cerrar Sesión</a>
+                </div>
+            </div>
         </div>
-    </section>   
-    <script defer src="cursos.js"></script> 
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 bg-gradient-to-br from-gray-900 via-black to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                    Nuestros Cursos
+                </h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                    Domina el arte de la ciberseguridad con nuestros cursos especializados diseñados por expertos
+                </p>
+                
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-400">50+</div>
+                        <div class="text-gray-400">Cursos</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-green-400">500+</div>
+                        <div class="text-gray-400">Estudiantes</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-purple-400">95%</div>
+                        <div class="text-gray-400">Satisfacción</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-cyan-400">24/7</div>
+                        <div class="text-gray-400">Soporte</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="py-8 bg-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap gap-4 justify-center">
+                <button class="filter-btn active bg-blue-600 text-white px-6 py-2 rounded-lg transition-all duration-300" data-filter="all">
+                    Todos
+                </button>
+                <button class="filter-btn bg-gray-700 text-gray-300 hover:bg-gray-600 px-6 py-2 rounded-lg transition-all duration-300" data-filter="hacking">
+                    Hacking Ético
+                </button>
+                <button class="filter-btn bg-gray-700 text-gray-300 hover:bg-gray-600 px-6 py-2 rounded-lg transition-all duration-300" data-filter="forense">
+                    Informática Forense
+                </button>
+                <button class="filter-btn bg-gray-700 text-gray-300 hover:bg-gray-600 px-6 py-2 rounded-lg transition-all duration-300" data-filter="redes">
+                    Seguridad de Redes
+                </button>
+                <button class="filter-btn bg-gray-700 text-gray-300 hover:bg-gray-600 px-6 py-2 rounded-lg transition-all duration-300" data-filter="web">
+                    Seguridad Web
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Grid -->
+    <section id="cursos" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="courseList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        </div>
+    </section>
+
+    <!-- Modal de login/registro para detalles de curso -->
+    <div id="auth-modal" style="display:none;"></div>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-blue-600 to-cyan-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">
+                ¿Listo para comenzar tu viaje en ciberseguridad?
+            </h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Únete a miles de estudiantes que ya están transformando sus carreras con False society
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="register.html" class="bg-white text-blue-600 px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                    <i class="fas fa-user-plus mr-2"></i>
+                    Registrarse Gratis
+                </a>
+                <a href="index.html#contacto" class="border-2 border-white text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:bg-white hover:text-blue-600">
+                    <i class="fas fa-envelope mr-2"></i>
+                    Contactar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/90 border-t border-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="/public/logo/log.png" alt="False society" class="h-8 w-8">
+                        <span class="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                            False society
+                        </span>
+                    </div>
+                    <p class="text-gray-400">
+                        Plataforma líder en educación de ciberseguridad
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Cursos</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#cursos" class="hover:text-white transition-colors duration-300">Hacking Ético</a></li>
+                        <li><a href="#cursos" class="hover:text-white transition-colors duration-300">Informática Forense</a></li>
+                        <li><a href="#cursos" class="hover:text-white transition-colors duration-300">Seguridad de Redes</a></li>
+                        <li><a href="#cursos" class="hover:text-white transition-colors duration-300">Todos los Cursos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Compañía</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html#sobre-nosotros" class="hover:text-white transition-colors duration-300">Sobre Nosotros</a></li>
+                        <li><a href="index.html#contacto" class="hover:text-white transition-colors duration-300">Contacto</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Carreras</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Síguenos</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-300">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-red-600 transition-all duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-purple-600 transition-all duration-300">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 False society. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/cursos.js"></script>
+
+    <style>
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .animate-fade-in {
+            animation: fade-in 0.6s ease-out;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1f2937;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #3b82f6, #06b6d4);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, #2563eb, #0891b2);
+        }
+    </style>
 </body>
 </html>

@@ -2,24 +2,168 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="login.css">
-    <script src="auth.js" defer></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Iniciar Sesión - False society</title> 
+    <link rel="icon" href="/public/logo/log.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="css/output.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script type="module" src="js/auth.js"></script>
 </head>
-<body>
-    <div class="login-container">
-        <h2>Iniciar Sesión</h2>
-        <form id="login-form">
-            <input type="email" id="email" placeholder="Correo electrónico" required />
-            <input type="password" id="password" placeholder="Contraseña" required />
-            <button type="submit" class="login-button">Iniciar sesión</button>
-            <div class="divider"></div>
-            <button type="button" class="create-account" onclick="window.location.href='register.html'">Crear una cuenta</button>
-        </form>
+
+<body class="flex items-center justify-center min-h-screen bg-cover bg-center bg-fixed p-2 sm:p-4 md:p-8 overflow-hidden" style="background-image: url('/imagen/fondo.jpg');">
+    
+    <!-- Elementos decorativos animados -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none select-none">
+        <div class="absolute top-1/4 right-0 w-40 h-40 md:w-56 md:h-56 bg-gradient-to-tr from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-1/4 left-0 w-56 h-56 md:w-80 md:h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 md:w-64 md:h-64 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
     </div>
-      
+
+    <!-- Caja de login optimizada y responsiva -->
+    <div class="relative bg-black/90 backdrop-blur-lg p-3 sm:p-4 md:p-6 lg:p-8 rounded-2xl md:rounded-3xl shadow-2xl w-full max-w-xs sm:max-w-sm md:max-w-sm lg:max-w-md xl:max-w-sm mx-auto border border-gray-700/50 hover:border-blue-500/30 transition-all duration-500 transform hover:scale-[1.01]">
+        
+        <!-- Logo y título -->
+        <div class="text-center mb-6 md:mb-8">
+            <div class="flex justify-center mb-4 md:mb-6">
+                <div class="relative">
+                    <img src="/public/logo/log.png" alt="False society Logo" class="h-12 w-12 md:h-16 md:w-16 transition-transform duration-300 hover:scale-110 mx-auto">
+                    <div class="absolute inset-0 bg-blue-500/20 rounded-full blur-lg"></div>
+                </div>
+            </div>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Bienvenido a False society
+            </h2>
+            <p class="text-gray-300 text-xs sm:text-sm md:text-base">Inicia sesión en tu cuenta</p>
+        </div>
+
+        <form id="login-form" class="space-y-3 md:space-y-4">
+            <!-- Campo Email -->
+            <div class="space-y-1">
+                <label for="email" class="block text-xs md:text-sm font-medium text-gray-300">Correo electrónico</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    placeholder="tu@email.com" 
+                    required
+                    class="w-full px-3 py-2 md:px-4 md:py-3 rounded-xl bg-white/10 border border-gray-600/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 backdrop-blur-sm text-sm md:text-base"
+                />
+            </div>
+
+            <!-- Campo Contraseña -->
+            <div class="space-y-1">
+                <label for="password" class="block text-xs md:text-sm font-medium text-gray-300">Contraseña</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    placeholder="••••••••" 
+                    required
+                    class="w-full px-3 py-2 md:px-4 md:py-3 rounded-xl bg-white/10 border border-gray-600/50 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 backdrop-blur-sm text-sm md:text-base"
+                />
+            </div>
+
+            <!-- Opciones adicionales -->
+            <div class="flex items-center justify-between text-xs md:text-sm">
+                <label class="flex items-center space-x-2 cursor-pointer">
+                    <input type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-500 focus:ring-2">
+                    <span class="text-gray-300">Recordarme</span>
+                </label>
+                <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors duration-300">¿Olvidaste tu contraseña?</a>
+            </div>
+
+            <!-- Mensaje de error/success -->
+            <div id="login-message" class="text-center text-sm mt-2"></div>
+
+            <!-- Botón de inicio de sesión -->
+            <button 
+                type="submit" 
+                class="group relative w-full py-2.5 md:py-3 px-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold text-base md:text-lg rounded-xl md:rounded-2xl transform hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
+            >
+                <span class="relative z-10 flex items-center justify-center space-x-2">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span>Iniciar sesión</span>
+                </span>
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl md:rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+            </button>
+
+            <!-- Separador -->
+            <div class="relative my-4 md:my-6">
+                <div class="absolute inset-0 flex items-center">
+                    <div class="w-full border-t border-gray-600/50"></div>
+                </div>
+                <div class="relative flex justify-center text-xs md:text-sm">
+                    <span class="px-3 bg-black/90 text-gray-400">¿No tienes cuenta?</span>
+                </div>
+            </div>
+
+            <!-- Botón crear cuenta -->
+            <button 
+                type="button" 
+                onclick="window.location.href='register.html'" 
+                class="w-full py-2.5 md:py-3 px-4 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold text-base md:text-lg rounded-xl md:rounded-2xl transform hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-green-500/25"
+            >
+                <span class="flex items-center justify-center space-x-2">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Crear una cuenta</span>
+                </span>
+            </button>
+        </form>
+
+        <!-- Enlaces sociales -->
+        <div class="mt-6 text-center">
+            <p class="text-gray-400 text-xs md:text-sm mb-3">O continúa con</p>
+            <div class="flex justify-center space-x-3">
+                <button class="w-10 h-10 bg-gray-800/50 rounded-xl flex items-center justify-center text-gray-400 hover:text-blue-400 hover:bg-blue-500/20 transition-all duration-300 transform hover:scale-105">
+                    <i class="fab fa-google text-lg"></i>
+                </button>
+                <button class="w-10 h-10 bg-gray-800/50 rounded-xl flex items-center justify-center text-gray-400 hover:text-blue-400 hover:bg-blue-500/20 transition-all duration-300 transform hover:scale-105">
+                    <i class="fab fa-github text-lg"></i>
+                </button>
+                <button class="w-10 h-10 bg-gray-800/50 rounded-xl flex items-center justify-center text-gray-400 hover:text-blue-400 hover:bg-blue-500/20 transition-all duration-300 transform hover:scale-105">
+                    <i class="fab fa-linkedin text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Volver al inicio -->
+        <div class="mt-6 text-center">
+            <a href="index.html" class="text-gray-400 hover:text-white transition-colors duration-300 text-xs md:text-sm flex items-center justify-center space-x-2">
+                <i class="fas fa-arrow-left"></i>
+                <span>Volver al inicio</span>
+            </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div id="nav-links" class="hidden md:flex items-center space-x-8"></div>
+
+        <!-- User Menu -->
+        <div id="user-menu" class="hidden md:flex items-center space-x-4"></div>
+    </div>
+
+    <!-- Scripts adicionales -->
+    <script type="module">
+        import { AuthManager } from './js/auth.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            AuthManager.renderNavbar();
+            AuthManager.setupLogoutHandler();
+        });
+    </script>
+
+    <style>
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+        .animate-shake { animation: shake 0.5s ease-in-out; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1f2937; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(to bottom, #3b82f6, #06b6d4); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: linear-gradient(to bottom, #2563eb, #0891b2); }
+        input:focus { box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); }
+        button:hover { transform: translateY(-2px); }
+        @media (max-width: 640px) { .bg-black\/90 { margin: 0.5rem; padding: 1rem; } }
+        @media (min-width: 768px) { .bg-black\/90 { max-width: 370px; padding: 1.7rem !important; } }
+        @media (min-width: 1024px) { .bg-black\/90 { max-width: 400px; padding: 2rem !important; } }
+    </style>
 </body>
 </html>

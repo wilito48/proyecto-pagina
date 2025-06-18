@@ -1,35 +1,18 @@
 const express = require('express');
 const router = express.Router();
-const Course = require('../models/Course');
-const User = require('../models/User');
-const { isAdmin } = require('../middleware/auth');
+const { isAdmin } = require('../middlewares/auth');
+const courseController = require('../controllers/courseController');
 
 // 📌 Crear un curso (solo admin)
-router.post('/crear', isAdmin, async (req, res) => {
-    try {
-        const { title, description, price } = req.body;
-        const course = new Course({ title, description, price });
-        await course.save();
-        res.json({ message: 'Curso creado exitosamente', course });
-    } catch (error) {
-        res.status(500).json({ error: 'Error al crear curso' });
-    }
-});
+router.post('/crear', isAdmin, courseController.createCourse);
 
 // 📌 Habilitar un curso para un usuario
-router.post('/habilitar/:userId/:courseId', isAdmin, async (req, res) => {
-    try {
-        const { userId, courseId } = req.params;
-        const user = await User.findById(userId);
-        if (!user) return res.status(404).json({ error: 'Usuario no encontrado' });
-        
+router.post('/habilitar/:userId/:courseId', isAdmin, courseController.enableCourse);
 
-        user.courses.push(courseId);
-        await user.save();
-        res.json({ message: 'Curso habilitado para el usuario' });
-    } catch (error) {
-        res.status(500).json({ error: 'Error al habilitar curso' });
-    }
-});
+// 📌 Obtener catálogo de cursos (público)
+router.get('/catalogo', courseController.getAllCourses);
+
+// 📌 Obtener detalles de un curso por id (público)
+router.get('/:id', courseController.getCourseById);
 
 module.exports = router;

@@ -3,32 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso - Plataforma de Cursos</title>
-    <link rel="stylesheet" href="styless.css">
-    <script defer src="curso.js"></script>
+    <title>Curso - CyberLearn</title>
+    <link rel="icon" href="/public/logo/log.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="css/output.css">
+    <script type="module" src="js/curso.js"></script>
 </head>
-<body>
 
-    <header>
-        <h1 id="courseTitle">Cargando...</h1>
-        <button id="backButton" class="btn">Volver a Cursos</button>
-    </header>
+<body class="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white font-sans antialiased min-h-screen">
+    
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-2">
+                    <img src="./logo/logo2.png" alt="CyberLearn Logo" class="h-8 w-8">
+                    <div class="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                        CyberLearn
+                    </div>
+                </a>
 
-    <section class="course-container">
-        <div class="course-card">
-            <img id="courseImage" src="" alt="Imagen del Curso" class="course-image">
-            <div class="course-info">
-                <h2 id="courseTitle2">Cargando...</h2>
-                <p id="courseDescription">Cargando descripción...</p>
-                <a id="startCourseButton" href="#" class="start-course-button">Empezar Curso</a>
-                <div id="temario" class="temario-container">
-                    <h3>Temario del Curso</h3>
-                    <ul id="temarioLista"></ul>
+                <!-- Navegación -->
+                <div class="flex items-center space-x-6">
+                    <a href="cursos.html" class="text-gray-300 hover:text-white transition-colors duration-300">Cursos</a>
+                    <a href="perfil.html" class="text-gray-300 hover:text-white transition-colors duration-300">Perfil</a>
+                    <a href="contacto.html" class="text-gray-300 hover:text-white transition-colors duration-300">Contacto</a>
                 </div>
-                
             </div>
         </div>
-    </section>
+    </nav>
 
+    <!-- Contenido principal -->
+    <main class="pt-20 pb-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header del curso -->
+            <header class="mb-8">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <h1 id="courseTitle" class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                        Cargando...
+                    </h1>
+                    <button id="backButton" 
+                            class="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                        </svg>
+                        <span>Volver a Cursos</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Contenedor del curso -->
+            <section class="course-container">
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl shadow-2xl border border-gray-700/50 overflow-hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                        
+                        <!-- Imagen del curso -->
+                        <div class="relative">
+                            <img id="courseImage" 
+                                 src="" 
+                                 alt="Imagen del Curso" 
+                                 class="w-full h-64 lg:h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+
+                        <!-- Información del curso -->
+                        <div class="p-6 sm:p-8 space-y-6">
+                            <div class="space-y-4">
+                                <h2 id="courseTitle2" class="text-2xl sm:text-3xl font-bold text-white">
+                                    Cargando...
+                                </h2>
+                                <p id="courseDescription" class="text-gray-300 leading-relaxed">
+                                    Cargando descripción...
+                                </p>
+                            </div>
+
+                            <!-- Botón de empezar curso -->
+                            <div class="pt-4">
+                                <a id="startCourseButton" 
+                                   href="#" 
+                                   class="inline-block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white py-4 px-8 rounded-xl font-semibold text-lg text-center transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl">
+                                    Empezar Curso
+                                </a>
+                            </div>
+
+                            <!-- Información adicional del curso -->
+                            <div class="grid grid-cols-2 gap-4 pt-4">
+                                <div class="bg-gray-700/30 p-4 rounded-xl">
+                                    <div class="flex items-center space-x-2 mb-2">
+                                        <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        <span class="text-sm text-gray-400">Duración</span>
+                                    </div>
+                                    <p class="text-white font-semibold">8 horas</p>
+                                </div>
+                                
+                                <div class="bg-gray-700/30 p-4 rounded-xl">
+                                    <div class="flex items-center space-x-2 mb-2">
+                                        <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        <span class="text-sm text-gray-400">Nivel</span>
+                                    </div>
+                                    <p class="text-white font-semibold">Intermedio</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Temario del curso -->
+                    <div class="p-6 sm:p-8 border-t border-gray-700/50">
+                        <div id="temario" class="temario-container">
+                            <h3 class="text-2xl font-bold text-white mb-6 flex items-center space-x-2">
+                                <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                                </svg>
+                                <span>Temario del Curso</span>
+                            </h3>
+                            <ul id="temarioLista" class="space-y-3">
+                                <!-- El temario se cargará dinámicamente aquí -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/50 border-t border-gray-800/50 py-8 px-4 sm:px-6 lg:px-8 mt-12">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-gray-400 text-sm">
+                © 2024 CyberLearn. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

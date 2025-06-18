@@ -1,0 +1,101 @@
+/* 🔹 Fondo general */
+html, body {
+    background: url('/imagen/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh;
+}
+
+.login-container { /* Usamos la misma clase que en login.html */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+    width: 350px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    /* Esto evitará que tenga margen extra */
+    flex-grow: 1; 
+}
+
+/* 🔹 Título */
+.login-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* 🔹 Campos de entrada */
+input[type="email"], input[type="password"], input[type="text"] {
+    width: 97%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    text-align: left;
+    outline: none;
+}
+
+/* 🔹 Placeholder */
+input::placeholder {
+    color: #666;
+}
+
+/* 🔹 Botón de registro (mismo estilo que login) */
+.register-button {
+    width: 97%;
+    padding: 12px;
+    background: linear-gradient(45deg, #28a745, #00c851);
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 15px; /* Espacio extra para que no esté pegado */
+}
+
+.register-button:hover {
+    background: linear-gradient(45deg, #218838, #007e33); /* Verde más intenso */
+    transform: scale(1.07); /* Efecto de crecimiento */
+    box-shadow: 0px 0px 12px rgba(40, 167, 69, 0.7); /* Efecto de brillo */
+}
+
+/* 🔹 Enlace para iniciar sesión */
+/* Estilo base para el enlace */
+#login-link {
+    display: inline-block;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+    transform: translateX(5px); /* Mover ligeramente a la derecha al hacer hover */
+}
+
+/* Efecto de clic */
+#login-link.clicked {
+    transform: scale(0.9);
+    box-shadow: 0 0 8px rgba(0, 0, 255, 0.5);
+}
+
+p {
+    margin: 25px 0 0 0; /* Ajusta el margen */
+}
